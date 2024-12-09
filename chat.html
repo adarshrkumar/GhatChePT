@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GhatChePT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <section class="messages">
+
+    </section>
+    <label for="input" class="input-area">
+      <input class="input" id="input" wrap="soft" placeholder="Input Text"></input>
+      <button class="icon options">
+        <label for="options" class="material-symbols-outlined">settings</label>
+        <input type="checkbox" id="options">
+        <div class="menu">
+          <label for="chkSpeak" class="check">
+            <input id="chkSpeak" type="checkbox" onchange="SpeechToText()">
+            Listen
+            <span class="material-symbols-outlined"></span>
+          </label>
+          <label for="chkMute" class="check">
+            <input id="chkMute" type="checkbox" onchange="Mute(this.checked)">
+            Mute
+            <span class="material-symbols-outlined"></span>
+          </label>
+          <select id="selModel">
+            <option value="text-davinci-003">text-davinci-003</option>
+            <option value="text-davinci-002">text-davinci-002</option>
+            <option value="code-davinci-002">code-davinci-002</option>
+          </select>
+          <select id="selLang" onchange="ChangeLang(this)">
+            <option value="en-US">English (United States)</option>
+            <option value="fr-FR">French (France)</option>
+            <option value="ru-RU">Russian (Russia)</option>
+            <option value="pt-BR">Portuguese (Brazil)</option>
+            <option value="es-ES">Spanish (Spain)</option>
+            <option value="de-DE">German (Germany)</option>
+            <option value="it-IT">Italian (Italy)</option>
+            <option value="pl-PL">Polish (Poland)</option>
+            <option value="nl-NL">Dutch (Netherlands)</option>
+          </select>
+          <select id="selVoices"></select>
+        </div>
+      </button>
+      <button class="icon options material-symbols-outlined" id="btnSend">send</button>
+    </label>
+    <script src="ChatGPT.js"></script>
+    <script>
+      // var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() };
+    </script>
+  </body>
+</html>
